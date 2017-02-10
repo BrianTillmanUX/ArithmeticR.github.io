@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Totem</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+
+        #sidebar.affix {
+            top: 20px;
+        }
+
+        /* sidebar */
+        .bs-docs-sidebar {
+            padding-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* all links */
+        .bs-docs-sidebar .nav > li > a {
+            color: #999;
+            border-left: 2px solid transparent;
+            padding: 4px 20px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        /* nested links */
+        .bs-docs-sidebar .nav .nav > li > a {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 30px;
+            font-size: 12px;
+        }
+
+        /* nested nested links */
+        .bs-docs-sidebar .nav .nav .nav > li > a {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 40px;
+            font-size: 11px;
+        }
+
+        /* nested nested links */
+        .bs-docs-sidebar .nav .nav .nav .nav > li > a {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 50px;
+            font-size: 10px;
+        }
+
+        /* active & hover links */
+        .bs-docs-sidebar .nav > .active > a,
+        .bs-docs-sidebar .nav > li > a:hover,
+        .bs-docs-sidebar .nav > li > a:focus {
+            color: #563d7c;
+            text-decoration: none;
+            background-color: transparent;
+            border-left-color: #563d7c;
+        }
+
+        /* all active links */
+        .bs-docs-sidebar .nav > .active > a,
+        .bs-docs-sidebar .nav > .active:hover > a,
+        .bs-docs-sidebar .nav > .active:focus > a {
+            font-weight: 700;
+        }
+
+        /* nested active links */
+        .bs-docs-sidebar .nav .nav > .active > a,
+        .bs-docs-sidebar .nav .nav > .active:hover > a,
+        .bs-docs-sidebar .nav .nav > .active:focus > a {
+            font-weight: 600;
+        }
+
+        /* nested active links */
+        .bs-docs-sidebar .nav .nav .nav > .active > a,
+        .bs-docs-sidebar .nav .nav .nav > .active:hover > a,
+        .bs-docs-sidebar .nav .nav .nav > .active:focus > a {
+            font-weight: 500;
+        }
+
+        /* nested active links */
+        .bs-docs-sidebar .nav .nav .nav .nav > .active > a,
+        .bs-docs-sidebar .nav .nav .nav .nav > .active:hover > a,
+        .bs-docs-sidebar .nav .nav .nav .nav > .active:focus > a {
+            font-weight: 400;
+        }
+
+        /* hide inactive nested list */
+        .bs-docs-sidebar .nav ul.nav {
+            display: none;
+        }
+
+        /* show active nested list */
+        .bs-docs-sidebar .nav > .active > ul.nav {
+            display: block;
+        }
+
+        /* hide inactive nested list */
+        .bs-docs-sidebar .nav ul.nav {
+            display: none;
+        }
+
+        /* show active nested list */
+        .bs-docs-sidebar .nav > .active > ul.nav {
+            display: block;
+        }
+
+    </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<div class="panel panel-default">
+    <div class="panel-body">
+        My Code
+    </div>
+</div>
+<div class="row">
+    <!--Nav Bar -->
+    <nav class="col-xs-3 bs-docs-sidebar">
+        <ul id="sidebar" class="nav nav-stacked">
+            <li><!-- Python Level 1-->
+                <a href="#Python">Python</a>
+                <ul class="nav nav-stacked">
+                    <li><!-- Python Level 2-->
+                        <a href="#TotemWelcome">Welcome</a>
+                    </li>
+                    <li><!-- Python Level 2-->
+					    <a href="#TotemVersionHistory">Version History</a>
+					</li>
+                </ul>
+            </li>
+
+                <a href="#Examples">Examples</a>
+                <ul class="nav nav-stacked">
+                    <li><a href="#ExamplesPlaceholder">Placeholder</a></li>
+
+                </ul>
+            </li>
+            <li><!-- R Level 1-->
+                <a href="#R">R</a>
+                <ul class="nav nav-stacked">
+                    <li><!-- R Level 2-->
+                        <a href="#TopMenuFile">File</a>
+                        <ul class="nav nav-stacked">
+                            <li><!-- R Level 3-->
+                                <a href="#FileActionSaveAs">Save As</a>
+                                <ul class="nav nav-stacked">
+                                    <li><!-- R Level 4-->
+										<a href="#FileActionSaveAs1">Start Action</a>
+									</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><!-- R Level 2-->
+                        <a href="#TopMenuPreferences">Preferences</a>
+                    </li>
+
+
+
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+    <!--Main Content -->
+    <div class="col-xs-9">
+        <div id="Python">
+            <h1>Python</h1>
+            <section id="TotemWelcome">
+                Hello
+            </section>
+            <section id="TotemVersionHistory">
+                <h2>Version History</h2>
+				Version History
+
+            </section>
+        </div>
+        <hr>
+
+        <div id="R">
+            <h1>Top Menu</h1>
+            <section id="TopMenuFile">
+                <h2>File</h2>
+                <div id="FileActionSaveAs">
+                    <h3>Save As</h3>
+                </div>
+                <div id="FileActionSaveAs1">
+                    <p>
+					Click 'Save As' on the file menu.
+
+					
+					</p>
+                    <img src="html_files\images\SaveAs.png">
+                </div>
+            </section>
+            <section id="TopMenuPreferences">
+                <h2>Preferences</a>
+            </section>
+        </div>
+        <hr>
+
+    </div>
+</div>
+
+</body>
+
+<script>
+    $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 40
+    });
+    $("#sidebar").affix({
+        offset: {
+            top: 60
+        }
+    });
+
+</script>
+</html>
