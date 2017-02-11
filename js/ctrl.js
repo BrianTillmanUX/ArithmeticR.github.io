@@ -3,10 +3,9 @@
  */
 var app = angular.module("myApp", []);
 
-(function () {
+
 
 
     app.controller("myCtrl", function ($scope) {
 
     })
-})
