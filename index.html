@@ -18,13 +18,13 @@
     <script type="text/javascript" src="js/ctrl.js"></script>
 
 </head>
-<body data-spy="scroll" data-target="#myScrollspy" data-offset="20" ng-app="myApp" ng-controller="myCtrl">
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20" >
 <div class="panel panel-default">
     <div class="panel-body">
         My Code
     </div>
 </div>
-<div class="row" >
+<div class="row" ng-app="myApp" ng-controller="myCtrl">
 <div ng-include="'pages/tabs.html'"></div>
     <!--Main Content -->
     <div class="col-xs-9">
