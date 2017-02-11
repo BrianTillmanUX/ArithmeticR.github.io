@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <title>Totem</title>
     <meta charset="utf-8">
@@ -13,98 +13,19 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="mystyles.css">
 </head>
-<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20" ng-app="myApp" ng-controller="myCtrl">
 <div class="panel panel-default">
     <div class="panel-body">
         My Code
     </div>
 </div>
-<div class="row">
-    <!--Nav Bar -->
-    <nav class="col-xs-3 bs-docs-sidebar">
-        <ul id="sidebar" class="nav nav-stacked">
-            <li><!-- Python Level 1-->
-                <a href="#Python">Python</a>
-                <ul class="nav nav-stacked">
-                    <li><!-- Python Level 2-->
-                        <a href="#TotemWelcome">Welcome</a>
-                    </li>
-                    <li><!-- Python Level 2-->
-                        <a href="#TotemVersionHistory">Version History</a>
-                    </li>
-                </ul>
-            </li>
-
-            <a href="#Examples">Examples</a>
-            <ul class="nav nav-stacked">
-                <li><a href="#ExamplesPlaceholder">Placeholder</a></li>
-
-            </ul>
-            </li>
-            <li><!-- R Level 1-->
-                <a href="#R">R</a>
-                <ul class="nav nav-stacked">
-                    <li><!-- R Level 2-->
-                        <a href="#TopMenuFile">File</a>
-                        <ul class="nav nav-stacked">
-                            <li><!-- R Level 3-->
-                                <a href="#FileActionSaveAs">Save As</a>
-                                <ul class="nav nav-stacked">
-                                    <li><!-- R Level 4-->
-                                        <a href="#FileActionSaveAs1">Start Action</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><!-- R Level 2-->
-                        <a href="#TopMenuPreferences">Preferences</a>
-                    </li>
-
-
-                </ul>
-            </li>
-
-
-        </ul>
-    </nav>
+<div class="row" >
+<div ng-include="'pages/tabs.html'"></div>
     <!--Main Content -->
     <div class="col-xs-9">
-        <div id="Python">
-            <h1>Python</h1>
-            <section id="TotemWelcome">
-                Hello
-            </section>
-            <section id="TotemVersionHistory">
-                <h2>Version History</h2>
-                Version History
+<div ng-include="'pages/python.html'"></div>
+<div ng-include="'pages/r.html'"></div>
 
-            </section>
-        </div>
-        <hr>
-
-        <div id="R">
-            <h1>R</h1>
-            <section id="TopMenuFile">
-                <h2>File</h2>
-
-                <div id="FileActionSaveAs">
-                    <h3>Save As</h3>
-                </div>
-                <div id="FileActionSaveAs1">
-                    <p>
-                        Click 'Save As' on the file menu.
-
-
-                    </p>
-                    <img src="html_files\images\SaveAs.png">
-                </div>
-            </section>
-            <section id="TopMenuPreferences">
-                <h2>Preferences</a>
-            </section>
-        </div>
-        <hr>
 
     </div>
 </div>
