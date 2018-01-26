@@ -1,0 +1,34 @@
+
+library(rlang)
+
+funs <- list()
+funs[["mpg+1"]] <- quo(mpg + 1)
+funs[["carb + gear"]] <- quo(carb + gear)
+
+mtcars %>% dplyr::mutate(UQS(funs))
+
+
+my_var <- "carb"
+funs <- list()
+funs[["mpg+2"]] <- quo(mtcars[['mpg']] + 1)
+funs[["carb + gear"]] <- quo(UQ(sym(my_var)) + gear)
+
+mtcars %>% dplyr::mutate(UQS(funs))
+
+
+quo(UQ(sym(my_var)) + gear)
+quo(my_var + gear)
+
+mtcars %>% group_by(UQS(syms(my_vars[1]))) %>% mutate(avg_mpg = mean(mpg))
+
+  
+mtcars %>% mutate(UQ(paste0(my_var, "+3")) := UQ(sym(my_var)) + 2)%>% head(9)
+mtcars %>% mutate(!!paste0(my_var, "+3") := UQ(sym(my_var)) + 2)%>% head(9)
+
+mtcars %>% filter(!!(sym(my_var)) != 2)
+
+
+mtcars %>% group_by(UQS(syms(my_vars[1]))) %>% mutate(avg_mpg = mean(mpg))
+
+UQ <> !!
+  UQS <> !!!
